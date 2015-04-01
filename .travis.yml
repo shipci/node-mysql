@@ -16,6 +16,12 @@ script:
 after_script:
   - "test $TRAVIS_NODE_VERSION = '0.6' || npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
 
+after_success:
+ - echo  "success"
+ 
+after_failure:
+ - echo "Failed"
+
 env:
   - MYSQL_HOST=localhost MYSQL_DATABASE=node_mysql MYSQL_USER=root MYSQL_PASSWORD=
 
