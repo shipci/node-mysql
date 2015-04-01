@@ -48,7 +48,7 @@ server.listen(common.fakeServerPort, function(err) {
 
       pool.end(function(err) {
         assert.ifError(err);
-        assert.strictEqual(closed, 3);
+        assert.strictEqual(closed, 2);
         server.destroy();
       });
     });
